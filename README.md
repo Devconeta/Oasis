@@ -258,6 +258,15 @@ contract Paper is
     }
 }
 ```
+## Deployed contracts
+
+### PaperFactory.sol
+Deployed on scroll testnet 0x87367a42F34a1c5B15337305BC32F2820ba49D7B 
+https://sepolia.scrollscan.com/address/0x87367a42F34a1c5B15337305BC32F2820ba49D7B
+
+### Paper.sol
+Deployed on scroll testnet 0xcda782501515ff7f7950f2b5881ebbfff021568f
+https://sepolia.scrollscan.com/address/0xcda782501515ff7f7950f2b5881ebbfff021568f
 
 ## Contributing
 
