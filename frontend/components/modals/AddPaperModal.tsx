@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 
-import { Tags } from '@/common/types/enums';
 import Modal from '../common/Modal';
-import { delay } from '@/common/utils/delay';
 import Spinner from '../icons/Spinner';
+
+import { Tags } from '@/common/types/enums';
+import { delay } from '@/common/utils/delay';
 
 interface AddPaperModalProps {
   isOpen: boolean;
@@ -179,7 +180,7 @@ const AddPaperModal: React.FC<AddPaperModalProps> = ({ isOpen, onClose }) => {
             type="submit"
             disabled={isSubmitting}
             className="flex justify-center min-w-[10rem] px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
-            {!isSubmitting ? <Spinner /> : 'Add Paper'}
+            {isSubmitting ? <Spinner /> : 'Add Paper'}
           </button>
         </div>
       </form>

@@ -17,20 +17,29 @@ import { getPapers } from '@/common/services/thegraph';
 // 16 August 2024
 
 const Papers = () => {
+  const [papers, setPapers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedTags, setSelectedTags] = useState<Tags[]>([]);
-  const [papers, setPapers] = useState([]);
 
   const filteredPapers = useMemo(() => {
-    return selectedTags.length === 0
-      ? mockPapers
-      : mockPapers.filter((paper) =>
-          paper.tags.some((tag) => selectedTags.includes(tag))
-        );
-  }, [selectedTags]);
+    return mockPapers.filter((paper) => {
+      const matchesTags =
+        selectedTags.length === 0 ||
+        paper.tags.some((tag) => selectedTags.includes(tag));
+      const matchesSearch = paper.title
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      return matchesTags && matchesSearch;
+    });
+  }, [selectedTags, searchTerm]);
 
   const onFilterChange = (newSelectedTags: Tags[]) => {
     setSelectedTags(newSelectedTags);
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
   };
 
   const onAddPaperClick = () => {
@@ -59,6 +68,8 @@ const Papers = () => {
       <div className="w-full h-full flex flex-col gap-8">
         <input
           placeholder="Search"
+          value={searchTerm}
+          onChange={handleSearchChange}
           className="w-[20%] py-1 px-4 rounded-md input-outline text-black"
         />
 

@@ -1,5 +1,6 @@
 import { Paper } from '@/common/types';
 import { generateSoftColor } from '@/common/utils/generateRandomSoftColor';
+import React from 'react';
 
 interface PaperCardProps {
   tags: string[];
@@ -29,4 +30,4 @@ const PaperCard = ({ tags, title }: PaperCardProps) => {
   );
 };
 
-export default PaperCard;
+export default React.memo(PaperCard);
