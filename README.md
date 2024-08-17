@@ -43,8 +43,6 @@ Our decentralized system for research funding leverages the following tech to ad
 
 - **Gallery Frontend:** Develop a user-friendly gallery interface where users can browse, search, and view research papers and associated NFTs with details.
 
-- **KYC for Researchers:** Implement a Know Your Customer (KYC) process to verify the identity of researchers, ensuring authenticity and credibility on the platform.
-
 - **Graph Viewer Frontend:** Create a frontend interface for visualizing and interacting with graph data, providing insights into research networks and connections.
 
 - **Funding Frontend:** Build an interface for users to contribute funds in many other ways to research projects, manage their investments, and track the progress of funded projects.
