@@ -39,11 +39,9 @@ Our decentralized system for research funding leverages the following tech to ad
 
 ### Next iterations:
 
-- **Airdrop System:** Launch a system to distribute free NFTs to early supporters and potential users to increase awareness and engagement with the platform.
-
 - **Gallery Frontend:** Develop a user-friendly gallery interface where users can browse, search, and view research papers and associated NFTs with details.
 
-- **Graph Viewer Frontend:** Create a frontend interface for visualizing and interacting with graph data, providing insights into research networks and connections.
+- **Graph Viewer Frontend:** Create a frontend interface for visualizing and interacting with graph data, providing insights into research networks, references, and connections.
 
 - **Funding Frontend:** Build an interface for users to contribute funds in many other ways to research projects, manage their investments, and track the progress of funded projects.
 
@@ -51,7 +49,7 @@ Our decentralized system for research funding leverages the following tech to ad
 
 ## Technologies Used
 
-- **Blockchain:** To ensure the integrity and transparency of transactions.
+- **EVM Smart Contracts:** To ensure the integrity and transparency of transactions.
 - **IPFS:** For decentralized storage of research papers.
 - **The Graph:** For indexing and querying data on the blockchain.
 - **Smart Contracts:** To manage the issuance of NFTs, funding, and the royalties system.
