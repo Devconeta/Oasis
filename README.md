@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In the research world, securing funding is one of the greatest challenges. Researchers often face financial barriers to carrying out their projects, and financial support is often uncertain or limited. Our project aims to transform this reality by providing a completely decentralized, accessible, transparent and blockchain-based funding system. We are building a connected and queriable network of references of on-chain papers that get funded by science supporters.
+In the research world, securing funding is one of the greatest challenges. Researchers often face financial barriers to carrying out their projects, and financial support is often uncertain or limited. Our project aims to transform this reality by providing a completely decentralized, accessible, transparent, blockchain-based funding system. We are building a connected and queriable network of on-chain papers and references that get funded by science supporters.
 
 ## Problem
 
@@ -11,16 +11,16 @@ Currently, the research funding process faces several issues:
 1. **Limited Access to Funds:** Researchers often rely on government grants or large organizations, which can be restrictive and competitive.
 2. **Lack of Transparency:** The allocation of funds and how they are distributed often lack transparency.
 3. **Insufficient Incentives:** Sponsors do not always have a tangible incentive to support research that may not have an immediate impact or that may not be of personal interest.
-4. **Complexity of tracking references between digital papers**
+4. **Complexity of tracking references between digital papers and publications**
 
 ## Solution
 
 Our decentralized system for research funding leverages the following tech to address these issues:
 
-- **Research/Paper ERC-1155 NFTs (Non-Fungible Tokens):** Each research project is represented by an NFT permanentely representing the corresponding research paper. These NFTs allow researchers to reward sponsors issuing a fixed number of copies. This way, researchers have full ownership of monetizing their research, and sponsors can trade the copies of the researchs.
+- **Research/Paper ERC-1155 NFTs (Non-Fungible Tokens):** Each research project is represented by an NFT permanently representing the corresponding research paper. These NFTs allow researchers to reward sponsors by issuing a fixed number of copies. This way, researchers have full ownership of monetizing their research, and sponsors can trade copies of the research. The researcher can get funded beforehand, and publish the paper updating the metadata of the NFT, but only once. 
 - **Blockchain:** We use blockchain technology to ensure the transparency and secure distribution of funds. Each funding transaction is recorded on the blockchain, ensuring the process is auditable and transparent.
-- **IPFS (InterPlanetary File System):** Research papers are stored on IPFS, a distributed file system that ensures the integrity and availability of documents over time.
-- **The Graph:** We implement The Graph to efficiently index and query data on the blockchain. This enables seamless integration between the frontend and the smart contracts managing NFTs and transactions. The main goal is to index the on-chain references between papers, a common used index on science to indicate importance and influence. 
+- **IPFS (InterPlanetary File System):** Research papers are stored on IPFS, a distributed file system that ensures the integrity, permanency, and availability of documents over time.
+- **The Graph:** We implement The Graph to efficiently index and query data on the blockchain. This enables seamless integration between the frontend and the smart contracts managing NFTs and transactions. The main goal is to index the on-chain references between papers, a commonly used index on science to indicate importance and influence. 
 
 ## Roadmap
 
@@ -28,18 +28,18 @@ Our decentralized system for research funding leverages the following tech to ad
 
 1. **Frontend:**
 
-   - Researchers can upload their papers to IPFS through an intuitive interface. They will set all the references for other on-chain papers to generate a connected network, and they can also set the minimun funding of their NFTs and define the number of copies available.
-   - Other users can access a dashboard to view trending papers, filter by topics, sort by references, trading volume, and search by various keywords.
+   - Researchers can upload their papers through an intuitive interface. They will set all the references for other on-chain papers to generate a connected network, and they will also set the minimum funding of their sponsors and define the number of copies available of the nfts.
+   - Other users can access a dashboard to view trending papers, filter by topics, and categories, **sort by amount references**, and trading volume, and search by various keywords.
 
-2. **Royalties System:** We implement a royalties system that ensures the original author of the research and relevant references receive fair compensation every time a transaction involving the associated NFT occurs. Also, we're implementing an additional and optional referenceRoyalty, where previous works refered on the paper will also get a small percentage of the funding.
+2. **Royalties System:** We implement a royalties system that ensures the original author of the research and relevant references receive fair compensation every time a transaction involving the associated NFT occurs. Also, we're implementing an additional and optional referenceRoyalty, where previous works referred to in the paper will also get a small percentage of the funding.
 
-3. **Indexation and trending papers**: Using [TheGraph](https://thegraph.com/) we create a subgraph that allow us to query the best papers now looking for funding, the most on-chain referenced ones or by higher trading volume.
+3. **Indexation and trending papers**: Using [TheGraph](https://thegraph.com/) we create a subgraph that allows us to query the best papers now looking for funding, **the most on-chain referenced ones**, or by higher trading volume.
 
 4. **Transparency and Security:** Thanks to blockchain and the implementation of smart contracts, all aspects of funding and royalty distribution are fully transparent and secure.
 
 ### Next iterations:
 
-- **Gallery Frontend:** Develop a user-friendly gallery interface where users can browse, search, and view research papers and associated NFTs with details.
+- **Gallery Frontend:** Improve the user-friendly gallery interface where users can browse, search, and view research papers and associated NFTs with details.
 
 - **Graph Viewer Frontend:** Create a frontend interface for visualizing and interacting with graph data, providing insights into research networks, references, and connections.
 
@@ -49,10 +49,18 @@ Our decentralized system for research funding leverages the following tech to ad
 
 ## Technologies Used
 
-- **EVM Smart Contracts:** To ensure the integrity and transparency of transactions.
-- **IPFS:** For decentralized storage of research papers.
+- **EVM Smart Contracts (Solidity+Hardhat):** To manage the issuance of NFTs, funding, and the royalties system. Ensures the integrity and transparency of transactions.
+- **IPFS (Thirdweb Gateway):** For decentralized storage of research papers.
 - **The Graph:** For indexing and querying data on the blockchain.
-- **Smart Contracts:** To manage the issuance of NFTs, funding, and the royalties system.
+
+## Current frontend interface
+<img width="1273" alt="image" src="https://github.com/user-attachments/assets/b11646f0-cfef-4d76-ae89-8f476df6eef5">
+
+
+## TheGraph Subgraph built by us to index papers and references
+<img width="1254" alt="image" src="https://github.com/user-attachments/assets/d06a623d-abaf-46ab-9aba-82e594717179">
+
+
 
 ## Paper.sol Contract
 
