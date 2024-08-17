@@ -53,6 +53,10 @@ Our decentralized system for research funding leverages the following tech to ad
 - **IPFS (Thirdweb Gateway):** For decentralized storage of research papers.
 - **The Graph:** For indexing and querying data on the blockchain.
 
+## Current frontend interface
+<img width="1273" alt="image" src="https://github.com/user-attachments/assets/b11646f0-cfef-4d76-ae89-8f476df6eef5">
+
+
 ## Paper.sol Contract
 
 ```solidity
