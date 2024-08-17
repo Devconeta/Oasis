@@ -5,8 +5,6 @@ import "hardhat-deploy";
 import "hardhat-deploy-ethers";
 require("dotenv").config();
 
-console.log("pkey", process.env.PRIVATE_KEY);
-
 const baseConfig: HardhatUserConfig = {
   solidity: "0.8.24",
   paths: {
@@ -48,6 +46,21 @@ const baseConfig: HardhatUserConfig = {
   },
   mocha: {
     timeout: 40000,
+  },
+  etherscan: {
+    apiKey: {
+      scrollSepolia: process.env.ETHERSCAN_API_KEY || "",
+    },
+    customChains: [
+      {
+        network: "scrollSepolia",
+        chainId: 534351,
+        urls: {
+          apiURL: "https://api-sepolia.scrollscan.com/api",
+          browserURL: "https://sepolia.scrollscan.com/",
+        },
+      },
+    ],
   },
 };
 

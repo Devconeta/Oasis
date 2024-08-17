@@ -40,3 +40,5 @@ export type { Strings } from "./@openzeppelin/contracts/utils/Strings";
 export { Strings__factory } from "./factories/@openzeppelin/contracts/utils/Strings__factory";
 export type { Paper } from "./contracts/Paper";
 export { Paper__factory } from "./factories/contracts/Paper__factory";
+export type { PaperFactory } from "./contracts/PaperFactory";
+export { PaperFactory__factory } from "./factories/contracts/PaperFactory__factory";
