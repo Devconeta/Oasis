@@ -57,6 +57,11 @@ Our decentralized system for research funding leverages the following tech to ad
 <img width="1273" alt="image" src="https://github.com/user-attachments/assets/b11646f0-cfef-4d76-ae89-8f476df6eef5">
 
 
+## TheGraph Subgraph built by us to index papers and references
+<img width="1254" alt="image" src="https://github.com/user-attachments/assets/d06a623d-abaf-46ab-9aba-82e594717179">
+
+
+
 ## Paper.sol Contract
 
 ```solidity
