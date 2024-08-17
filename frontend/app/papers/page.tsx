@@ -1,22 +1,25 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect, useLayoutEffect } from 'react';
 
 import PaperCard from '@/components/ui/PaperCard';
 import TrendingPaper from '@/components/ui/TrendingPaper';
 import TagFilterDropdown from '@/components/ui/TagFilterDropdown';
+import AddPaperModal from '@/components/modals/AddPaperModal';
 
 import { Tags } from '@/common/types/enums';
 import { trendingMockPapers, mockPapers } from '@/common/constants';
-import AddPaperModal from '@/components/modals/AddPaperModal';
+import { getPapers } from '@/common/services/thegraph';
 
 // Computation of Biological Conductance with Liouville Quantum Master Equation
 // Recent experiments have revealed that single proteins can display high conductivity, which stays finite for low temperatures, decays slowly with distance, and exhibits a rich spatial structure featuring highly conducting and strongly insulating domains. Here, we intruduce a new formula by combining the density matrix of the Liouville-Master Equation simulating quantum transport in nanoscale devices, and the phenomenological model of electronic conductance through molecules, that can account for the observed distance- and temperature dependence of conductance in proteins. We demonstrate its efficacy on experimentally highly conductive extracellular cytochrome nanowires, which are good candidates to illustrate our new approach by calculating and visualizing their electronic wiring, given the interest in the arrangement of their conducting and insulating parts. As proteins and protein nanowires exhibit significant potential for diverse applications, including energy production and sensing, our computational technique can accelerate the design of nano-bioelectronic devices.
 // Eszter Papp, Gabor Vattay
+// 16 August 2024
 
 const Papers = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedTags, setSelectedTags] = useState<Tags[]>([]);
+  const [papers, setPapers] = useState([]);
 
   const filteredPapers = useMemo(() => {
     return selectedTags.length === 0
@@ -33,6 +36,22 @@ const Papers = () => {
   const onAddPaperClick = () => {
     setIsModalOpen(true);
   };
+
+  useLayoutEffect(() => {
+    const fetchPapersFromGraph = async () => {
+      try {
+        const papers = await getPapers();
+
+        console.log(papers);
+
+        setPapers(papers);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchPapersFromGraph();
+  }, []);
 
   return (
     <>

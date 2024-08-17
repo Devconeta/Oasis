@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 
 import { Tags } from '@/common/types/enums';
 import Modal from '../common/Modal';
+import { delay } from '@/common/utils/delay';
+import Spinner from '../icons/Spinner';
 
 interface AddPaperModalProps {
   isOpen: boolean;
@@ -19,6 +21,8 @@ const AddPaperModal: React.FC<AddPaperModalProps> = ({ isOpen, onClose }) => {
   const [pdfFile, setPdfFile] = useState<File | null>(null);
   const [imageFile, setImageFile] = useState<File | null>(null);
 
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+
   const onCloseModal = () => {
     setTitle('');
     setDescription('');
@@ -27,12 +31,17 @@ const AddPaperModal: React.FC<AddPaperModalProps> = ({ isOpen, onClose }) => {
     setSelectedTags([]);
     setPdfFile(null);
     setImageFile(null);
+    setIsSubmitting(false);
 
     onClose();
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    setIsSubmitting(true);
+
+    await delay(5000);
 
     // upload to ipfs
     // deploy contract
@@ -168,8 +177,9 @@ const AddPaperModal: React.FC<AddPaperModalProps> = ({ isOpen, onClose }) => {
         <div className="flex justify-end">
           <button
             type="submit"
-            className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
-            Add Paper
+            disabled={isSubmitting}
+            className="flex justify-center min-w-[10rem] px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
+            {!isSubmitting ? <Spinner /> : 'Add Paper'}
           </button>
         </div>
       </form>
