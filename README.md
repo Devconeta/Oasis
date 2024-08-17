@@ -1,4 +1,4 @@
-# Oasis: Infrastructure for researchers and scientists to build censorship-resistant, independently funded science that is open to everyone.
+## Oasis: Infrastructure for researchers and scientists to build censorship-resistant, independently funded science that is open to everyone.
 
 ## Introduction
 
