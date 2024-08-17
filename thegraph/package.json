@@ -1,0 +1,8 @@
+{
+  "name": "oasis-thegraph",
+  "version": "1.0.0",
+  "description": "Oasis thegraph implementation",
+  "main": "schema.graphql",
+  "repository": "https://github.com/Devconeta/Oasis",
+  "license": "MIT"
+}
