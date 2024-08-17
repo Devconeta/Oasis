@@ -1,3 +1,5 @@
-export default function Home() {
-  return <main></main>;
+import Home from '@/components/sections/Home';
+
+export default function RootHome() {
+  return <Home />;
 }
