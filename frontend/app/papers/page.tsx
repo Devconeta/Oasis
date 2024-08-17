@@ -42,6 +42,7 @@ const Papers = () => {
       try {
         const papers = await getPapers();
 
+        // IT WORKS!!!
         console.log(papers);
 
         setPapers(papers);
