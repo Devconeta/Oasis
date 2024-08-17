@@ -54,7 +54,7 @@ Our decentralized system for research funding leverages the following tech to ad
 - **The Graph:** For indexing and querying data on the blockchain.
 - **Smart Contracts:** To manage the issuance of NFTs, funding, and the royalties system.
 
-## Paper Contract
+## Paper.sol Contract
 
 ```solidity
 // SPDX-License-Identifier: MIT
