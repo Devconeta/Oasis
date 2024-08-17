@@ -11,7 +11,7 @@ Currently, the research funding process faces several issues:
 1. **Limited Access to Funds:** Researchers often rely on government grants or large organizations, which can be restrictive and competitive.
 2. **Lack of Transparency:** The allocation of funds and how they are distributed often lack transparency.
 3. **Insufficient Incentives:** Sponsors do not always have a tangible incentive to support research that may not have an immediate impact or that may not be of personal interest.
-4. **Complexity of tracking references
+4. **Complexity of tracking references between digital papers**
 
 ## Solution
 
