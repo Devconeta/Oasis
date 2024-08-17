@@ -1,11 +1,19 @@
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
+import type { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
+import "@nomicfoundation/hardhat-chai-matchers";
+import "hardhat-deploy";
+import "hardhat-deploy-ethers";
+require("dotenv").config();
+
+console.log("pkey", process.env.PRIVATE_KEY);
+
+const baseConfig: HardhatUserConfig = {
   solidity: "0.8.24",
   paths: {
-    sources: "./src",
+    sources: "./contracts",
     tests: "./tests",
     cache: "./cache",
-    artifactSSSs: "./artifacts",
+    artifacts: "./artifacts",
   },
   namedAccounts: {
     deployer: {
@@ -31,8 +39,16 @@ module.exports = {
     hardhat: {
       saveDeployments: true,
     },
+    scrollSepolia: {
+      url: "https://sepolia-rpc.scroll.io",
+      chainId: 534351,
+      accounts: [process.env.PRIVATE_KEY || ""],
+      saveDeployments: true,
+    },
   },
   mocha: {
     timeout: 40000,
   },
 };
+
+export default baseConfig;
