@@ -21,16 +21,44 @@ Our decentralized system leverages cutting-edge technologies to address these is
 - **IPFS (InterPlanetary File System):** Research papers are stored on IPFS, a distributed file system that ensures the integrity and availability of documents over time.
 - **The Graph:** We implement The Graph to efficiently index and query data on the blockchain. This enables seamless integration between the frontend and the smart contracts managing NFTs and transactions.
 
-## Project Features
+## Roadmap
+
+### First Step:
+
+<!--
+
+- Subida de archivos a IPFS
+- Contrato NFT
+- Sistema de Royalties
+- Frontend para subida y busqueda
+  paper
+- Frontend Profile
+- Creacion de Grafo
+- Sistema de Referencias
+ -->
 
 1. **Frontend:**
+
    - Researchers can upload their papers to IPFS through an intuitive interface. They can also set the price of their NFTs and define the number of copies available.
    - Other users can access a dashboard to view trending papers, filter by topics, sort, and search by various keywords.
+
 2. **Royalties System:** We implement a royalties system that ensures the original author of the research and relevant references receive fair compensation every time a transaction involving the associated NFT occurs.
 
-3. **Internal Marketplace:** Users can purchase NFTs for research they are interested in and also trade these NFTs on an internal marketplace. This offers buyers the opportunity to gain future benefits if the research becomes prominent.
+3. **Indexation and trending papers**: Using [TheGraph](https://thegraph.com/) we create a subgraph that allow us to query the best papers now looking for investor or that just are having more views or moving bug funding volumes!
 
 4. **Transparency and Security:** Thanks to blockchain and the implementation of smart contracts, all aspects of funding and royalty distribution are fully transparent and secure.
+
+### Next iterations:
+
+- **Airdrop System:** Launch a system to distribute free NFTs to early supporters and potential users to increase awareness and engagement with the platform.
+
+- **Gallery Frontend:** Develop a user-friendly gallery interface where users can browse, search, and view research papers and associated NFTs with details.
+
+- **KYC for Researchers:** Implement a Know Your Customer (KYC) process to verify the identity of researchers, ensuring authenticity and credibility on the platform.
+
+- **Graph Viewer Frontend:** Create a frontend interface for visualizing and interacting with graph data, providing insights into research networks and connections.
+
+- **Funding Frontend:** Build an interface for users to contribute funds in many other ways to research projects, manage their investments, and track the progress of funded projects.
 
 ## Technologies Used
 
@@ -41,10 +69,9 @@ Our decentralized system leverages cutting-edge technologies to address these is
 
 ## How It Works
 
-1. **Creating an NFT:** A researcher uploads their paper to IPFS and creates an NFT associated with their research using a smart contract.
-2. **Issuing NFTs:** The researcher sets the price and number of copies of the NFT available.
-3. **Buying and Supporting:** Users purchase NFTs to support the research. The funds raised are allocated to the researcher.
-4. **Royalties:** Every time an NFT is sold on the internal marketplace, royalties are distributed to the research author and relevant references.
+1. **Creating an NFT:** A researcher uploads their paper to IPFS and creates an NFT associated with their research using a smart contract.The researcher sets the price and number of copies of the NFT available.
+2. **Minting NFT and Supporting:** Users purchase NFTs to support the research. The funds raised are allocated to the researcher.
+3. **Royalties:** Every time an NFT is sold on the internal marketplace, royalties are distributed to the research author and relevant references.
 
 ## How to run this
 
