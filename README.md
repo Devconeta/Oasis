@@ -1,8 +1,10 @@
-## Oasis: Infrastructure for researchers and scientists to build censorship-resistant, independently funded science that is open to everyone.
+# Oasis: Decentralized Funding for Research
 
 ## Introduction
 
 In the research world, securing funding is one of the greatest challenges. Researchers often face financial barriers to carrying out their projects, and financial support is often uncertain or limited. Our project aims to transform this reality by providing a completely decentralized, accessible, transparent, blockchain-based funding system. We are building a connected and queriable network of on-chain papers and references that get funded by science supporters.
+
+We provide infrastructure for researchers and scientists to build censorship-resistant, independently funded science that is **open to everyone**.
 
 ## Problem
 
