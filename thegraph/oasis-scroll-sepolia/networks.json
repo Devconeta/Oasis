@@ -1,8 +1,8 @@
 {
   "scroll-sepolia": {
-    "Carpincho": {
-      "address": "0x1Eb5742f73B2bfe836dD31B4FF0f7e8db30Aa1Fd",
-      "startBlock": 6132777
+    "Paper": {
+      "address": "0x4F5C5Bc6c1DbA7C037D09558f5EfbFC1Ec091BF5",
+      "startBlock": 6145860
     }
   }
 }

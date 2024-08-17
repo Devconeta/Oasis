@@ -18,7 +18,6 @@ const AddPaperModal: React.FC<AddPaperModalProps> = ({ isOpen, onClose }) => {
   const [selectedTags, setSelectedTags] = useState<Tags[]>([]);
   const [pdfFile, setPdfFile] = useState<File | null>(null);
   const [imageFile, setImageFile] = useState<File | null>(null);
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
 
   const onCloseModal = () => {
     setTitle('');
@@ -28,7 +27,6 @@ const AddPaperModal: React.FC<AddPaperModalProps> = ({ isOpen, onClose }) => {
     setSelectedTags([]);
     setPdfFile(null);
     setImageFile(null);
-    setImagePreview(null);
 
     onClose();
   };
@@ -57,11 +55,6 @@ const AddPaperModal: React.FC<AddPaperModalProps> = ({ isOpen, onClose }) => {
         setPdfFile(e.target.files[0]);
       } else {
         setImageFile(e.target.files[0]);
-        const reader = new FileReader();
-        reader.onloadend = () => {
-          setImagePreview(reader.result as string);
-        };
-        reader.readAsDataURL(e.target.files[0]);
       }
     }
   };
@@ -101,7 +94,7 @@ const AddPaperModal: React.FC<AddPaperModalProps> = ({ isOpen, onClose }) => {
         <div className="flex gap-3">
           <div className="w-[60%] space-y-1">
             <label htmlFor="author" className="text-sm font-medium ">
-              Paper Author
+              Paper Author/s
             </label>
             <input
               type="text"

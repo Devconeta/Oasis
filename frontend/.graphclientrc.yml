@@ -1,0 +1,6 @@
+# .graphclientrc.yml
+sources:
+  - name: oasis
+    handler:
+      graphql:
+        endpoint: https://api.studio.thegraph.com/query/86729/oasis-scroll-sepolia/version/latest

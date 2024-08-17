@@ -10,6 +10,10 @@ import { Tags } from '@/common/types/enums';
 import { trendingMockPapers, mockPapers } from '@/common/constants';
 import AddPaperModal from '@/components/modals/AddPaperModal';
 
+// Computation of Biological Conductance with Liouville Quantum Master Equation
+// Recent experiments have revealed that single proteins can display high conductivity, which stays finite for low temperatures, decays slowly with distance, and exhibits a rich spatial structure featuring highly conducting and strongly insulating domains. Here, we intruduce a new formula by combining the density matrix of the Liouville-Master Equation simulating quantum transport in nanoscale devices, and the phenomenological model of electronic conductance through molecules, that can account for the observed distance- and temperature dependence of conductance in proteins. We demonstrate its efficacy on experimentally highly conductive extracellular cytochrome nanowires, which are good candidates to illustrate our new approach by calculating and visualizing their electronic wiring, given the interest in the arrangement of their conducting and insulating parts. As proteins and protein nanowires exhibit significant potential for diverse applications, including energy production and sensing, our computational technique can accelerate the design of nano-bioelectronic devices.
+// Eszter Papp, Gabor Vattay
+
 const Papers = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedTags, setSelectedTags] = useState<Tags[]>([]);

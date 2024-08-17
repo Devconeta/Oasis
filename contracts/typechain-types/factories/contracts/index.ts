@@ -2,3 +2,4 @@
 /* tslint:disable */
 /* eslint-disable */
 export { Paper__factory } from "./Paper__factory";
+export { PaperFactory__factory } from "./PaperFactory__factory";

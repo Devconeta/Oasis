@@ -81,6 +81,10 @@ declare module "hardhat/types/runtime" {
       name: "Paper",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Paper__factory>;
+    getContractFactory(
+      name: "PaperFactory",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.PaperFactory__factory>;
 
     getContractAt(
       name: "Ownable",
@@ -167,6 +171,11 @@ declare module "hardhat/types/runtime" {
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.Paper>;
+    getContractAt(
+      name: "PaperFactory",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.PaperFactory>;
 
     deployContract(
       name: "Ownable",
@@ -236,6 +245,10 @@ declare module "hardhat/types/runtime" {
       name: "Paper",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.Paper>;
+    deployContract(
+      name: "PaperFactory",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PaperFactory>;
 
     deployContract(
       name: "Ownable",
@@ -322,6 +335,11 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.Paper>;
+    deployContract(
+      name: "PaperFactory",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PaperFactory>;
 
     // default types
     getContractFactory(

@@ -15,6 +15,7 @@
     "thirdweb": "^5.46.1"
   },
   "devDependencies": {
+    "@graphprotocol/client-cli": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

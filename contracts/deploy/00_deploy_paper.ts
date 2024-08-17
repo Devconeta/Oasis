@@ -22,6 +22,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     _baseFundingPrice: ethers.parseEther("0.001"),
     _referenceRoyalty: 2, // 2%
   };
+  console.log("Deploying Paper with the following constructor args: ", constructorArgs);
   await deploy("Paper", {
     from: deployer,
     log: true,
