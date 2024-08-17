@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@graphprotocol/client-cli": "^3.0.6",
+    "@stablelib/random": "^2.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
