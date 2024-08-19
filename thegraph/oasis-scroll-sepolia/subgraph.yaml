@@ -5,12 +5,31 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum
-    name: Paper
+    name: PaperFactory
     network: scroll-sepolia
     source:
-      address: "0x4F5C5Bc6c1DbA7C037D09558f5EfbFC1Ec091BF5"
+      address: "0x87367a42F34a1c5B15337305BC32F2820ba49D7B"
+      abi: PaperFactory
+      startBlock: 6152943
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - PaperCreated
+      abis:
+        - name: PaperFactory
+          file: ./abis/paperFactory.json
+      eventHandlers:
+        - event: PaperCreated(indexed address,indexed address)
+          handler: handlePaperCreated
+      file: ./src/paperFactory.ts
+templates:
+  - kind: ethereum
+    network: scroll-sepolia
+    name: Paper
+    source:
       abi: Paper
-      startBlock: 6145860
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7

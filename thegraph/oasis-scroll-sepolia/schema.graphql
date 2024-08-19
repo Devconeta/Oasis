@@ -68,3 +68,11 @@ type URI @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+type PaperCreated @entity(immutable: true) {
+  id: Bytes!
+  paper: Bytes! # address
+  owner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
